@@ -3,7 +3,7 @@ HouseElecFull <- read.csv("household_power_consumption.txt",sep=";",colClasses=c
 
 'Reduce the dataset to what we are studying'
 startRow <- which(HouseElecFull$Date == "1/2/2007")[1]
-endRow <- which(HouseElecFull$Date == "3/2/2007")[1]
+endRow <- which(HouseElecFull$Date == "3/2/2007")[1] - 1
 HouseElecStudy <- HouseElecFull[startRow:endRow,]
 
 rm(HouseElecFull)
